@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Cyber-Biophilic Palette */
+  --color-obsidian: #080C0A;
+  --color-deep-moss: #121A16;
+  --color-electric-mint: #00F5A0;
+  --color-vibrant-ember: #FF5A36;
+  --color-muted-sage: #7A8A82;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: #080C0A; /* Obsidian Base */
+  --foreground: #7A8A82; /* Muted Sage default text */
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  /* Dark mode enforced */
+  color-scheme: dark;
+}
+
+/* Utilities */
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@utility bg-bento {
+  background-color: var(--color-deep-moss);
+}
+
+@utility border-bento {
+  border: 1px solid color-mix(in srgb, var(--color-muted-sage) 20%, transparent);
+}
+
+/* Smooth layout transitions */
+* {
+  box-sizing: border-box;
+}
